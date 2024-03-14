@@ -76,6 +76,9 @@ cover/
 
 # Django stuff:
 
+# myenv
+myenv/
+
 # Flask stuff:
 instance/
 .webassets-cache
