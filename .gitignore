@@ -79,6 +79,9 @@ cover/
 # myenv
 myenv/
 
+# migrations
+migrations/
+
 # Flask stuff:
 instance/
 .webassets-cache
