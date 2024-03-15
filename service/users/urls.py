@@ -5,13 +5,9 @@ from .views import (
     AuthViewSet
 )
 
-# 해당 url에 post 요청이 오면, views.py의 AuthViewSet의 signup 메서드를 사용하겠다는 의미
-signup = AuthViewSet.as_view((
-    'post': 'signup'
-))
-
+# AuthViewSet의 signup 메서드를 사용하는 signup 경로 설정
 urlpatterns = [
-    path('/signup', signup)
+    path('signup/', AuthViewSet.as_view({'post': 'signup'}), name='signup'),
 ]
 
 # 실제로 요청을 받는 부분은 지금의 users앱 내 urls.py가 아니라 service 프로젝트의 urls.py임 
