@@ -4,8 +4,8 @@ from django.contrib.auth import login
 
 # drf modules
 from rest_framework import status
-from rest_framework import Response
-from rest_framework import ModelViewSets
+from rest_framework.response import Response
+from rest_framework.viewsets import ModelViewSet
 from rest_framework.permissions import AllowAny
 
 # modules
@@ -14,7 +14,7 @@ from users.models import User
 # serializers
 from users.serializers import UserSerializer
 
-class AuthViewSet(ModelViewSets):
+class AuthViewSet(ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
     permissions = [AllowAny]

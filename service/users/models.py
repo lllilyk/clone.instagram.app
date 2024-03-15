@@ -36,8 +36,8 @@ class User(AbstractUser):
     description = models.CharField(max_length=512, blank=True)
     authcode = models.CharField(max_length=17)
 
-    created = models.DataTimeField(auto_now_add=True)
-    updated = models.DataTimeField(auto_now=True)
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
 
     # 이름은 objects가 아니여도 됨
     objects = UserManager()
