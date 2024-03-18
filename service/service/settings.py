@@ -23,9 +23,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-**3c9ed(y^8e7pr8i-uv4q1%t!w7)qi#oepb*yd$^detcvvpgw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+# RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set
+APPEND_SLASH = False
+
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition

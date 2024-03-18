@@ -22,5 +22,5 @@ from django.urls import include
 # users로 오는 요청은 users 앱의 urls.py로 전달!
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('users', include('users.urls')),
+    path('users/', include('users.urls')),
 ]

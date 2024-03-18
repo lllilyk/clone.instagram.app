@@ -19,3 +19,10 @@ Docker 컨테이너 내에서 실행되고 있음
 ```bash
     source myenv/bin/activate
 ```
+
+<br />
+
+## 서버 실행
+```bash
+    (myenv) /code/service # python manage.py runserver 0.0.0.0:8000
+```

@@ -28,6 +28,9 @@ class UserManager(BaseUserManager):
 # class User(models.Model): //이렇게 하지 않고 사용자 정보를 다루는 모델을 정의하기 위해서 아래와 같이 작성함
 class User(AbstractUser):
     TIMEOUT = 60 * 5
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = ['username']
+
 
     email = models.EmailField(max_length=256, unique=True)
     username = models.CharField(max_length=128, unique=True)
