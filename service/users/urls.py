@@ -1,9 +1,7 @@
 # Client 또는 프론트엔드에서의 요청(url)과 정의한 메서드를 연결하기 위함
 from django.urls import path
+from users.views import AuthViewSet
 
-from .views import (
-    AuthViewSet
-)
 
 # AuthViewSet의 signup 메서드를 사용하는 signup 경로 설정
 urlpatterns = [

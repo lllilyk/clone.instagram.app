@@ -19,8 +19,19 @@ Docker 컨테이너 내에서 실행되고 있음
 ```bash
     source myenv/bin/activate
 ```
++ service 디렉토리로 이동해라
 
 <br />
+
+
+
+## 도커 컨테이너에 네트워크 지정
+```bash
+    docker network connect instaclone instaclone-01
+```
+
+<br />
+
 
 ## 서버 실행
 ```bash
