@@ -4,20 +4,15 @@ from rest_framework import serializers
 from users.models import User
 
 class UserSerializer(serializers.ModelSerializer):
+
+    authcode = serializers.CharField(required=False)
+
     class Meta:
         # Serializer의 쓰임
         # 1. 객체를 전달하면 해당 객체에 JSON 표현을 반환
         # 이 serializers는 User 필드에 있는 데이터들로 JSON을 생성하게 해줌.
         model = User
-        field = (
-            'pk',
-            'email',
-            'username',
-            'profile',
-            'description',
-            'password',
-            'updated'
-        )
+        fields = '__all__'
         extra_kwards = {
             'password': {
                 'write_only': True

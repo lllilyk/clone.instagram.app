@@ -22,7 +22,7 @@ class AuthViewSet(ModelViewSet):
     def signup(self, request):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        User = serializer.save()
+        user = serializer.save()
         login(request, user)
         return Response(
             serializer.data,
